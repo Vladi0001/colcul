@@ -4,23 +4,25 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class CalculaytorService implements CalculaytorServiceInterface {
-
+@Override
     public String calculator() {
         return "Добро пожаловать в калькулятор";
     }
-
-    public String plus() {
-        return "5 + 5 = ";
+    @Override
+    public int plus(int num1, int num2) {
+        return num1 + num2;
     }
-
-    public String minus() {
-        return "5 - 5 = ";
+    @Override
+    public int minus(int num1, int num2) {
+        return num1 - num2;
     }
-    public String multiply() {
-        return "5 * 5 = ";
+    @Override
+    public int multiply(int num1, int num2) {
+        return num1 * num2;
     }
-    public String divide() {
-        return "5 / 5 = ";
+    @Override
+    public int divide(int num1, int num2) {
+        return num1 / num2;
     }
 
 
